@@ -1,0 +1,44 @@
+@import "./settings/variable";
+@import "./tools/mixin";
+@import "./vendor/normalize";
+
+$primary: #6ba7ff;
+
+$theme-colors: (
+        primary: $primary,
+);
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap";
+//@import "~@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.css";
+
+//@import "~owl.carousel/dist/assets/owl.carousel.css";
+
+@import "components/font";
+//@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+@import "components/base/base";
+@import "components/base/navbar";
+@import "components/base/blocks";
+
+//@import "~mmenu-light/src/mmenu-light";
+//@import "components/mmenu/custom-mmenu.css";
+
+$slick-loader-path: "../img/";
+$slick-font-path: "../fonts/slick/";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+//
+//$slick-loader-path:'img/../../';
+
+@import "components/ilazy";
+@import "components/styles";
+//$body-color: slateblue;
+//
+//body {
+//  color: $body-color;
+//  font-family: sans-serif;
+//}

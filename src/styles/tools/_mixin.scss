@@ -1,0 +1,20 @@
+@import "./../settings/variable";
+
+@mixin fonts($family,$weights,$size) {
+    font-family: '#{$family}';
+    font-weight: $weights ;
+    font-size: $size ;
+}
+@mixin respond-to($breakpoint) {
+    $media: map-get($breakpoints, $breakpoint );
+    @media #{$media} {
+        @content
+    }
+    
+}
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
