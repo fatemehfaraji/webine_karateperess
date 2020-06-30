@@ -139,6 +139,10 @@ body {
         padding: 9px 20px 9px 0;
         position: relative;
         color: $textColor;
+
+        @include respond-to(larg){
+            padding: 4px 20px 9px 0;
+        }
         &:after{
             content: '';
             position: absolute;
@@ -192,6 +196,11 @@ body {
 .news-slider-side{
     max-width: 276px;
     margin: 0 0 10px 0;
+    @include respond-to(tablet){
+        max-width: initial;
+        width: 49.5%;
+        display: inline-block;
+    }
     .news-slider-side-img{
         border-radius: $roundedCu;
         overflow: hidden;
@@ -202,10 +211,20 @@ body {
         padding: 39px 20px 5px;
         color: #fff;
         background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 87%);
+        @include respond-to(larg){
+            padding: 25px 20px 5px;
+        }
+        @include respond-to(desktop){
+            padding: 22px 20px 5px;
+        }
+
         .text-1{
             margin: 0;
             font-size: 15px;
             font-weight: 500;
+            @include respond-to(desktop){
+                font-size: 13px;
+            }
         }
         .text-2{
             margin: 0;
@@ -223,5 +242,33 @@ body {
         bottom: inherit;
         text-align: right;
         width: inherit;
+        li{
+            height: inherit;
+            width: inherit;
+            button{
+                color: #fff;
+                padding: 0;
+                height: 10px;
+                &:before{
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-color: #fff;
+                    border-radius: 13px;
+                }
+            }
+            &.slick-active{
+                button{
+                    &:before{
+                        width: 20px;
+                    }
+                }
+            }
+        }
     }
+}
+
+
+.slick-dotted.slick-slider{
+    margin: 0;
 }

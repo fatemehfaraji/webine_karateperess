@@ -182,3 +182,12 @@ $('.slick-carousel-main').slick({
     dots: true,
     arrows: false,
 });
+
+$('.go-to-slide').click(function (e) {
+    e.preventDefault();
+    var dataId = $(this).attr("data-slide-go");
+    $('.slick-carousel-main').slick('slickGoTo', dataId);
+});
+
+
+
