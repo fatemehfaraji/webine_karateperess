@@ -191,3 +191,9 @@ $('.go-to-slide').click(function (e) {
 
 
 
+
+import '@fancyapps/fancybox';
+$('[data-fancybox="gallery"]').fancybox({
+    toolbar  : true,
+});
+
